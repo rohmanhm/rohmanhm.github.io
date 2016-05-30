@@ -1,0 +1,18 @@
+{
+	"color" : 
+	{
+		"blue":
+		{
+			"background" : "#1F3A93",
+			"backgroundDark" : "rgb(24, 46, 119)",
+			"color" : "#FFFFFF"
+		},
+
+		"red":
+		{
+			"background" : "#CF000F",
+			"backgroundDark" : "rgb(183, 0, 13)",
+			"color" : "#FFFFFF"
+		}
+	}
+}

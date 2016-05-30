@@ -1,0 +1,10 @@
+/* INITIALIZE FONTS */
+@font-face {
+	font-family: 'OpenSans';
+	src :   url('../fonts/opensans/OpenSans-Regular.ttf'),
+			url('../fonts/opensans/OpenSans-Light.ttf'),
+			url('../fonts/opensans/OpenSans-Semibold.ttf')
+			url('../fonts/opensans/OpenSans-Bold.ttf')
+			url('../fonts/opensans/OpenSans-ExtraBold.ttf')
+		;
+}
