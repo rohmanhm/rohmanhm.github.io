@@ -25,6 +25,18 @@
 			"background" : "#F7CA18",
 			"backgroundDark" : "rgb(228, 186, 21)",
 			"color" : "#444444"
+		},
+		"pink":
+		{
+			"background" : "#DB0A5B",
+			"backgroundDark" : "rgb(195, 8, 80)",
+			"color" : "#FFFFFF"
+		},
+		"purple":
+		{
+			"background" : "#663399",
+			"backgroundDark" : "rgb(85, 36, 134)",
+			"color" : "#FFFFFF"
 		}
 	}
 }

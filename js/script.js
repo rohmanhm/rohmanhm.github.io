@@ -55,7 +55,7 @@ function applyColor(){
 			'color' : color.background
 		})
 
-		$('.group-detail').css({
+		$('.group-detail, .qr-text').css({
 			'color' : color.color
 		})
 
@@ -67,7 +67,7 @@ function applyColor(){
 			'border-right-color' : color.background
 		})
 
-		$('.group-content h4').css({
+		$('.group-content h4, .qr-text').css({
 			'background' : color.backgroundDark
 		})
 	}

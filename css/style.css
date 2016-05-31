@@ -1,8 +1,9 @@
 /* COLOR CHOICE */
 #color-choice {
+    margin: 0 auto;
     margin-top: 25px;
-    display: inline-flex;
     justify-content: flex-end;
+    text-align: end;
 }
 #color-choice li {
     display: inline-block;
@@ -19,6 +20,7 @@
     padding: 5px;
     margin-right: 15px;
     color: #BBBBBB;
+    float: left;
 }
 
 /* APP */
@@ -185,6 +187,23 @@ section#sidebar, section#main {
     padding-top: 5px;
     padding-left: 10%;
     overflow-x: auto;
+}
+
+.qr-code img {
+    width: 100%;
+}
+.qr-text {
+    color: inherit;
+    background: inherit;
+    border: 0;
+    padding: 2px 15px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.qr-link {
+    line-height: 3;
+    margin-top: 5px;
 }
 /* MAIN */
 section#main {

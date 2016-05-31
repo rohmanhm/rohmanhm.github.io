@@ -19,16 +19,32 @@
 </head>
 <body>
 
-<div class="container" id="color-choice">
-	<div class="choose-color">
-		<label>Pilih warna favorit anda</label>
+<!-- OVERLAYER -->
+<div class="overlay" id="lihat-sertifikat">
+	<div class="container">
+		<img src="">
 	</div>
-	<ul>
-		<li data-color="blue" style="background:#1F3A93;"></li>
-		<li data-color="red" style="background:#CF000F;"></li>
-		<li data-color="green" style="background:#019875;"></li>
-		<li data-color="yellow" style="background:#F7CA18;"></li>
-	</ul>
+</div>
+
+<!-- COLOR CHOICE -->
+<div class="container" id="color-choice">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="choose-color">
+				<label>Pilih warna favorit anda</label>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<ul>
+				<li data-color="blue" style="background:#1F3A93;"></li>
+				<li data-color="red" style="background:#CF000F;"></li>
+				<li data-color="green" style="background:#019875;"></li>
+				<li data-color="yellow" style="background:#F7CA18;"></li>
+				<li data-color="pink" style="background:#DB0A5B;"></li>
+				<li data-color="purple" style="background:#663399;"></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <!-- CONTAINER -->
@@ -105,6 +121,23 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="group-panel scan-me">
+				<div class="group-title">
+					<h3><i class="fa fa-qrcode"></i>Scan me</h3>
+				</div>
+				<div class="group-detail">
+					<div class="group-content">
+						<div class="qr-code">
+							<img src="img/my_cv.png">
+						</div>
+						<div class="qr-link">
+							Atau kunjungi <input onClick="this.select();" type="text" class="qr-text" value="https://rohmanhm.github.io/" id="qr-link" readonly="true">
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</section>
 
 		<section id="main" class="col-xs-12 col-sm-8 col-md-9">
@@ -264,6 +297,84 @@
 				</div>
 			</div>
 
+			<!-- SERTIFIKAT -->
+			<div class="panel-group">
+				<div class="panel-title">
+					<h3><i class="fa fa-certificate"></i>Sertifikat</h3>
+				</div>
+				<div class="panel-detail">
+					<table>
+						<tbody>
+							<tr>
+								<td class="align-left table-title">Februari 2015</td>
+								<td class="ui">
+									<div class="title">
+										Sertifikat Praktek Kerja Industri
+									</div>
+									<div class="desc">
+										Praktek Kerja Industri Pada : PT SIMBIKA JAKARTA Mulai Tanggal <br>24 Desember 2014 s.d 24 Februari 2015.
+									</div>
+								</td>
+								<td class="certif">
+									<div class="certified">
+										<button>Lihat sertifikat</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">27 Februari 2016</td>
+								<td class="ui">
+									<div class="title">
+										Sertifikat Kompetensi
+									</div>
+									<div class="desc">
+										Uji kompetensi bidang Rekayasa Perangkat Lunak
+									</div>
+								</td>
+								<td class="certif">
+									<div class="certified">
+										<button>Lihat sertifikat</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">27 Mei 2016</td>
+								<td class="ui">
+									<div class="title">
+										Sertifikat Kelulusan
+									</div>
+									<div class="desc">
+										Surat keterangan hasil ujian (SKHU)
+									</div>
+								</td>
+								<td class="certif">
+									<div class="certified">
+										<button>Lihat sertifikat</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">27 Mei 2016</td>
+								<td class="ui">
+									<div class="title">
+										Sertifikat Peserta LKS Nasional
+									</div>
+									<div class="desc">
+										Penghargaan LKS Nasional bidang lomba Web Design di Malang, Jawa Timur
+									</div>
+								</td>
+								<td class="certif">
+									<div class="certified">
+										<button>Lihat sertifikat</button>
+									</div>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+
 			<!-- PENGALAMAN -->
 			<div class="panel-group">
 				<div class="panel-title">
@@ -276,12 +387,12 @@
 								<td class="align-left table-title">2014 - 2015</td>
 								<td class="ui">
 									<div class="title">
-										Praktek Kerja Lapangan di SIMBIKA
+										Praktek Kerja Lapangan di PT SIMBIKA JAKARTA
 									</div>
 									<div class="desc">
 										Sebagai pemrogram website di SIMBIKA dan membantu memperbaiki laptop-laptop yang rusak disana. <br>
 										<address>
-											Alamat <span>No A Cinere, Jl. Bukit Cinere No.145, Gandul, Kota Depok, Jawa Barat </span>
+											Alamat <span>No A Cinere, Jl. Bukit Cinere No.145, Gandul, Kota Depok, Jawa Barat </span><br>
 											Telp. <span>021-7535378</span>
 										</address>
 									</div>
