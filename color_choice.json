@@ -13,6 +13,18 @@
 			"background" : "#CF000F",
 			"backgroundDark" : "rgb(183, 0, 13)",
 			"color" : "#FFFFFF"
+		},
+		"green":
+		{
+			"background" : "#019875",
+			"backgroundDark" : "rgb(3, 136, 105)",
+			"color" : "#FFFFFF"
+		},
+		"yellow":
+		{
+			"background" : "#F7CA18",
+			"backgroundDark" : "rgb(228, 186, 21)",
+			"color" : "#444444"
 		}
 	}
 }

@@ -35,12 +35,27 @@ function applyColor(){
 			'background' : color.background,
 			'color' : color.color
 		})
-		$('.profile-position').css({
+		$('.profile-position, td.table-title, .panel-group i, td.ui .title').css({
 			'color' : color.background
 		})
 
-		$('.image-profile, hr').css({
+		$('.group-detail').css({
+			'color' : color.color
+		})
+
+		$('.image-profile, hr, .panel-group i').css({
 			'border-color' : color.backgroundDark
+		})
+
+		$('.group-content h4').css({
+			'background' : color.backgroundDark
 		})
 	}
 }
+
+$('#color-choice li').click(function(e){
+	var data = $(this).attr('data-color');
+
+	colorIndex = data;
+	applyColor();
+})

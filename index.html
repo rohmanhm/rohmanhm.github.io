@@ -19,6 +19,18 @@
 </head>
 <body>
 
+<div class="container" id="color-choice">
+	<div class="choose-color">
+		<label>Pilih warna favorit anda</label>
+	</div>
+	<ul>
+		<li data-color="blue" style="background:#1F3A93;"></li>
+		<li data-color="red" style="background:#CF000F;"></li>
+		<li data-color="green" style="background:#019875;"></li>
+		<li data-color="yellow" style="background:#F7CA18;"></li>
+	</ul>
+</div>
+
 <!-- CONTAINER -->
 <div class="container" id="app" aria-describedBy="container">
 	<div class="row">
@@ -54,25 +66,41 @@
 				<div class="group-detail">
 					<div class="group-content">
 						<h4>Personal</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+						<table>
+							<tbody>
+								<tr>
+									<td>Status</td>
+									<td>:</td>
+									<td>Belum menikah</td>
+								</tr>
+								<tr>
+									<td>Tanggal lahir</td>
+									<td>:</td>
+									<td>15 Agustus 1998</td>
+								</tr>
+								<tr>
+									<td>Kota</td>
+									<td>:</td>
+									<td>Pati</td>
+								</tr>
+								<tr>
+									<td>Provinsi</td>
+									<td>:</td>
+									<td>Jawa Tengah</td>
+								</tr>
+								<tr>
+									<td>Negara</td>
+									<td>:</td>
+									<td>Indonesia</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 
 					<div class="group-content">
-						<h4>Personal</h4>
+						<h4>Hobi</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							
 						</p>
 					</div>
 				</div>
@@ -83,37 +111,167 @@
 			<!-- SEKOLAH -->
 			<div class="panel-group">
 				<div class="panel-title">
-					<h3><i class="fa fa-graduation-cap"></i>Sekolah</h3>
+					<h3><i class="fa fa-university"></i>Sekolah</h3>
 				</div>
 				<div class="panel-detail">
 					<table>
 						<tbody>
 							<tr>
 								<td class="align-left table-title">2006 - 2010</td>
-								<td class="ui">SD Negeri Alasdowo 01</td>
+								<td class="ui">
+									<div class="title">
+										SD Negeri Alasdowo 01
+									</div>
+									<div class="desc">
+										Alasdowo, Pati, Jawa Tengah, Indonesia
+									</div>
+								</td>
 							</tr>
 							<tr>
 								<td class="align-left table-title">2010 - 2013</td>
-								<td class="ui">SMP Negero 01 Tayu</td>
+								<td class="ui">
+									<div class="title">
+										SMP Negeri 01 Tayu
+									</div>
+									<div class="desc">
+										Tayu, Pati, Jawa Tengah, Indonesia
+									</div>
+								</td>
 							</tr>
 							<tr>
 								<td class="align-left table-title">2013 - 2016</td>
-								<td class="ui">SMK Telkom Terpadu AKN Marzuqi</td>
+								<td class="ui">
+									<div class="title">
+										SMK Telkom Terpadu AKN Marzuqi (RPL)
+									</div>
+									<div class="desc">
+										Selempung, Pati, Jawa Tengah, Indonesia
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 
+			<!-- PRESTASI -->
 			<div class="panel-group">
 				<div class="panel-title">
-					<h3><i class="fa fa-user"></i>Pengalaman</h3>
+					<h3><i class="fa fa-trophy"></i>Prestasi</h3>
+				</div>
+				<div class="panel-detail">
+					<table>
+						<tbody>
+							<tr>
+								<td class="align-left table-title">Juli 2014</td>
+								<td class="ui">
+									<div class="title">
+										Juara 1 Lomba Web Design Competition USM
+									</div>
+									<div class="desc">
+										Menjuarai WDC UNNES Tingkat SMK/SMA/MA
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">November 2014</td>
+								<td class="ui">
+									<div class="title">
+										Juara 1 Lomba Web Design Competition UNNES
+									</div>
+									<div class="desc">
+										Menjuarai WDC UNNES Tingkat Siswa dan Mahasiswa se-Indonesia
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">Maret 2015</td>
+								<td class="ui">
+									<div class="title">
+										Juara 3 Lomba Web Design Competition UGM
+									</div>
+									<div class="desc">
+										Menjuarai WDC UGM Tingkat SMK/SMA/MA se-Indonesia oleh Vocomfest
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">Agustus 2015</td>
+								<td class="ui">
+									<div class="title">
+										Juara 1 Lomba LKS Web Design Kabupaten
+									</div>
+									<div class="desc">
+										Menjuarai LKS Web Design tingkat Kabupaten di Kabupaten Pati
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">September 2015</td>
+								<td class="ui">
+									<div class="title">
+										Juara 1 Lomba LKS Web Design Provinsi
+									</div>
+									<div class="desc">
+										Menjuarai LKS Web Design tingkat Provinsi di Provinsi Jawa Tengah
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="align-left table-title">Mei 2016</td>
+								<td class="ui">
+									<div class="title">
+										Juara Harapan 2 Lomba LKS Web Design Nasional
+									</div>
+									<div class="desc">
+										Menjuarai LKS Web Design tingkat Nasional di Malang
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- PENGALAMAN -->
+			<div class="panel-group">
+				<div class="panel-title">
+					<h3><i class="fa fa-tasks"></i>Pengalaman</h3>
+				</div>
+				<div class="panel-detail">
+					<table>
+						<tbody>
+							<tr>
+								<td class="align-left table-title">2014 - 2015</td>
+								<td class="ui">
+									<div class="title">
+										Praktek Kerja Lapangan di SIMBIKA
+									</div>
+									<div class="desc">
+										Sebagai pemrogram website di SIMBIKA dan membantu memperbaiki laptop-laptop yang rusak disana. <br>
+										<address>
+											Alamat <span>No A Cinere, Jl. Bukit Cinere No.145, Gandul, Kota Depok, Jawa Barat </span>
+											Telp. <span>021-7535378</span>
+										</address>
+									</div>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- SKILL -->
+			<div class="panel-group">
+				<div class="panel-title">
+					<h3><i class="fa fa-code"></i>Skill</h3>
 				</div>
 				<div class="panel-detail">
 					<ul>
-						<li>Macul</li>
-						<li>Ngarit</li>
-						<li>Ngecor</li>
+						<li>
+							oho
+						</li>
 					</ul>
 				</div>
 			</div>
