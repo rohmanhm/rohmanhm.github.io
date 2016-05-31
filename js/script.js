@@ -16,7 +16,7 @@ elemDB = [
 	'section#sidebar',
 ];
 
-colorIndex = 'blue';
+colorIndex = 'red';
 
 $(function(){
 	$.get('color_choice.json', function(data){
@@ -44,4 +44,3 @@ function applyColor(){
 		})
 	}
 }
-
