@@ -60,6 +60,7 @@ section#sidebar, section#main {
     font-weight: bold;
     border-radius: 2px;
     padding: 0px 10px;
+    font-size: 1.3rem;
 }
 
 .image-profile img {
@@ -309,5 +310,8 @@ tr {
 @media screen and (max-width: 480px) {
 	.row {
 		display: inherit;
+	}
+	#color-choice {
+	    text-align: left;
 	}
 }
