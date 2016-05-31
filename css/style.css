@@ -1,3 +1,35 @@
+/* OVERLAYER */
+.overlay {
+    position: fixed;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow-y: auto;
+}
+.image-overlay img {
+    width: 100%;
+    display: block;
+    visibility:;
+}
+
+.overlay-wrapper {
+    background: #fff;
+    padding: 5px 35px;
+    margin: 25px 0;
+    border-radius: 2px;
+}
+.close-overlay {float: right;background: none;outline: none;font-size: 3em;color: #fff;margin-right: 20px;}
+.btn {
+    outline: none !IMPORTANT;
+}
+
+.overlay .image-title h3 {
+    font-weight: 300;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
 /* COLOR CHOICE */
 #color-choice {
     margin: 0 auto;
@@ -260,6 +292,7 @@ td.certif {
 }
 td.ui .desc {
     font-size: .8em;
+    white-space: normal;
 }
 td.align-right {
     text-align: right;
