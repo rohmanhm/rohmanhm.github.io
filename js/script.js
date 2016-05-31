@@ -14,6 +14,7 @@ var elemDB;
 
 elemDB = [
 	'section#sidebar',
+	'.certified button'
 ];
 
 colorIndex = 'red';
@@ -21,20 +22,35 @@ colorIndex = 'red';
 $(function(){
 	$.get('color_choice.json', function(data){
 		colorDB = data;
+		var style= '<style type="text/css">';
+		var endStyle = '</style>';
+
+		for(var a in data.color){
+			style += '[data-color=' + a + '] .certified button::before{border-right-color:' + data.color[a].background + ';}';
+			style += ' [data-color=' + a + '] .panel-group:hover i{background : ' + data.color[a].background + '; color : ' + data.color[a].color + '!IMPORTANT;  }';
+		}
+		style += endStyle;
+		$(style).appendTo('head');
 		applyColor();
 	})
 })
 
 // Memasang settingan ke web
 function applyColor(){
+	$('body').attr('data-color', colorIndex);
+
 	for(var x = 0; x < elemDB.length; x++){
 		var elem = $(elemDB[x]);
 
 		var color = colorDB.color[colorIndex];
-		elem.css({
-			'background' : color.background,
-			'color' : color.color
-		})
+
+		for(var i = 0; i < elem.length; i++){
+			$(elem[i]).css({
+				'background' : color.background,
+				'color' : color.color
+			})
+		}
+		
 		$('.profile-position, td.table-title, .panel-group i, td.ui .title').css({
 			'color' : color.background
 		})
@@ -45,6 +61,10 @@ function applyColor(){
 
 		$('.image-profile, hr, .panel-group i').css({
 			'border-color' : color.backgroundDark
+		})
+
+		$('.certified button::before').css({
+			'border-right-color' : color.background
 		})
 
 		$('.group-content h4').css({
