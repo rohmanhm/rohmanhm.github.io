@@ -7,6 +7,10 @@
     height: 100%;
     top: 0;
     overflow-y: auto;
+    display: none;
+}
+.overlay.active {
+    display: block;
 }
 .image-overlay img {
     width: 100%;

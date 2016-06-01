@@ -12,6 +12,8 @@
 var colorDB, colorIndex;
 var elemDB;
 
+var prestasiDB;
+
 elemDB = [
 	'section#sidebar',
 	'.certified button'
@@ -33,6 +35,10 @@ $(function(){
 		$(style).appendTo('head');
 		applyColor();
 	})
+
+	// $.get('prestasi.json', function(data){
+	// 	prestasiDB = data;
+	// })
 })
 
 // Memasang settingan ke web
@@ -79,3 +85,11 @@ $('#color-choice li').click(function(e){
 	colorIndex = data;
 	applyColor();
 })
+
+function openSertifikat(){
+	$("#lihat-sertifikat").addClass("active");
+}
+
+function hideSertifikat(){
+	$("#lihat-sertifikat").removeClass("active");
+}
