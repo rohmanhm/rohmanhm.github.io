@@ -32,7 +32,7 @@ colorIndex = 'red';
  */
 $(function(){
 	$.get('color_choice.json', function(data){
-		var data = JSON.parse(data);
+		// var data = JSON.parse(data);
 		colorDB = data;
 		var style= '<style type="text/css">';
 		var endStyle = '</style>';
