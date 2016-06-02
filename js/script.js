@@ -48,9 +48,13 @@ $(function(){
 		applyColor();
 	})
 
-	// $.get('prestasi.json', function(data){
-	// 	prestasiDB = data;
-	// })
+	$.get('prestasi.json', function(data){
+		if(typeof(data) == 'string'){
+			var data = JSON.parse(data);
+		}
+
+		prestasiDB = data;
+	})
 })
 
 /**
@@ -101,10 +105,56 @@ $('#color-choice li').click(function(e){
 	applyColor();
 })
 
-function openSertifikat(){
+$('.certified button').click(function(){
+	
 	$("#lihat-sertifikat").addClass("active");
-}
+	var type = $(this).attr('data-type');
+	var cert = $(this).attr('data-cert');
+
+	$("#wrapper-sertifikat").html("");
+
+	var data = prestasiDB[type][cert].data;
+
+	for(var i = 0; i < data.length; i++){
+		var divParent = document.createElement('div');
+		divParent.classList.add('image-overlay');
+
+		var divTitle = document.createElement('div');
+		divTitle.classList.add('image-title');
+		var h3 = document.createElement('h3');
+		h3.textContent = data[i].title;
+		document.createTextNode(h3);
+		divTitle.appendChild(h3);
+		document.createTextNode(divTitle);
+		divParent.appendChild(divTitle);
+
+		var divImage = document.createElement('div');
+		divImage.classList.add('image-file');
+		var img = document.createElement('img');
+		img.src = data[i].image;
+		document.createTextNode(img);
+		divImage.appendChild(img);
+		document.createTextNode(divImage);
+		divParent.appendChild(divImage);
+
+		document.createTextNode(divParent);
+
+		$("#wrapper-sertifikat").append(divParent);
+
+		if(data.length < 2){
+			$('.image-overlay').css({
+				'width' : '75%'
+			})
+		}else{
+			$('.image-overlay').css({
+				'width' : '48%'
+			})
+		}
+	}
+
+})
 
 function hideSertifikat(){
 	$("#lihat-sertifikat").removeClass("active");
+	return false;
 }
