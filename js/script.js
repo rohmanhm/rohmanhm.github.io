@@ -42,6 +42,8 @@ $(function(){
 		for(var a in data.color){
 			style += '[data-color=' + a + '] .certified button::before{border-right-color:' + data.color[a].background + ';}';
 			style += ' [data-color=' + a + '] .panel-group:hover i{background : ' + data.color[a].background + '; color : ' + data.color[a].color + '!IMPORTANT;  }';
+			style += ' [data-color=' + a + '] .panel-group i:after{border-color:'+data.color[a].background+'}';
+			style += ' [data-color=' + a + '] .btn:hover {color:'+data.color[a].background+'; background: '+ data.color[a].color +'}';
 		}
 		style += endStyle;
 		$(style).appendTo('head');
