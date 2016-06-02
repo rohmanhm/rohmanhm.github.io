@@ -8,19 +8,28 @@
 
 'use strict';
 
-// Melakukan inisialisasi ketika web di load
 var colorDB, colorIndex;
 var elemDB;
 
 var prestasiDB;
 
+/** @type {Array} [element database] */
 elemDB = [
 	'section#sidebar',
 	'.certified button'
 ];
 
+/**
+ * Index warna yang akan muncul
+ * @type {String}
+ */
 colorIndex = 'red';
 
+/**
+ * Event document load
+ * @param  {[type]} ){	$.get('color_choice.json', function(data){		var data mengambil data
+ * @return {[type]}                                mengambil data
+ */
 $(function(){
 	$.get('color_choice.json', function(data){
 		var data = JSON.parse(data);
@@ -42,7 +51,10 @@ $(function(){
 	// })
 })
 
-// Memasang settingan ke web
+/**
+ * Memasang settingan ke web
+ * 
+ */
 function applyColor(){
 	$('body').attr('data-color', colorIndex);
 
