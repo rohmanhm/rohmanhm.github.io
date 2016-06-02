@@ -12,6 +12,14 @@
 .overlay.active {
     display: block;
 }
+.image-overlay {
+    width: 48%;
+    display:inline-block;
+    margin: 0 1%;
+    background: #fff;
+    padding: 1% 5%;
+}
+
 .image-overlay img {
     width: 100%;
     display: block;
@@ -19,19 +27,20 @@
 }
 
 .overlay-wrapper {
-    background: #fff;
+    background: none;
     padding: 5px 35px;
     margin: 25px 0;
     border-radius: 2px;
+    text-align: center;
 }
-.close-overlay {float: right;background: none;outline: none;font-size: 3em;color: #fff;margin-right: 20px;}
+.close-overlay {background: none;outline: none;font-size: 3em;color: #eee;position: absolute;z-index: 999;right: 15px;}
 .btn {
     outline: none !IMPORTANT;
 }
 
 .overlay .image-title h3 {
     font-weight: 300;
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-bottom: 25px;
 }
 /* COLOR CHOICE */
@@ -351,4 +360,14 @@ tr {
 	#color-choice {
 	    text-align: left;
 	}
+    .image-overlay {
+        width: 100% !IMPORTANT;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .overlay-wrapper {
+        margin: 0;
+        padding: 0;
+    }
 }
