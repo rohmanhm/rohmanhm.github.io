@@ -375,6 +375,27 @@ tr {
 	top: 8px;
 }
 
+/* PANEL DETAIL */
+.panel-detail li {
+    padding: 10px 0;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.panel-detail li ul:after {
+    content: '\f107';
+    font-size:2em;
+    position: absolute;
+    font-family: "FontAwesome";
+    right: 0;
+    top: 0;
+}
+
+.panel-detail li ul {
+
+}
+
 /* KEYFRAME */
 @keyframes showoverlay {
     from {margin-top:-200%;}

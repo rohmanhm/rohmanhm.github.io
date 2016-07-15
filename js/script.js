@@ -44,7 +44,9 @@ $(function(){
 			style += ' [data-color=' + a + '] .panel-group:hover i{background : ' + data.color[a].background + '; color : ' + data.color[a].color + '!IMPORTANT;  }';
 			style += ' [data-color=' + a + '] .panel-group i:after{border-color:'+data.color[a].background+'}';
 			style += ' [data-color=' + a + '] .btn:hover {color:'+data.color[a].background+'; background: '+ data.color[a].color +'}';
+			style += ' [data-color=' + a + '] .panel-detail li ul:after {color:'+data.color[a].background+';}';
 		}
+
 		style += endStyle;
 		$(style).appendTo('head');
 		applyColor();
