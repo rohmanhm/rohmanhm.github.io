@@ -91,6 +91,7 @@ section#sidebar, section#main {
 }
 #sidebar .group-content td {
     padding:1px 5px;
+    vertical-align: baseline;
 }
 .profile {
     text-align: center;
