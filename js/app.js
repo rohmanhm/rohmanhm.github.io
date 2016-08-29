@@ -58,7 +58,13 @@ var navigate = new Vue({
 		getNavigate: function () {
 			var vm = this;
 			$.get('json/navigate.json', function (res) {
-				vm.$set('navigate', JSON.parse(res).data);
+				var data;
+				if (typeof(res) != 'object') {
+					data = JSON.parse(res);
+				}else{
+					data = res;
+				}
+				vm.$set('navigate', data.data);
 			});
 		},
 		decodeHTML: function (html) {
@@ -94,7 +100,11 @@ var myhistory = new Vue({
 			vm.$set('buttonNavigate', false);
 			setTimeout(function () {
 				$.get('json/' + history + '.json', function (res) {
-					data = JSON.parse(res);
+					if (typeof(res) != 'object') {
+						data = JSON.parse(res);
+					}else{
+						data = res;
+					}
 					vm.$set('datas', data.data);
 					vm.animContent(false);
 					vm.$set('buttonNavigate', true);
