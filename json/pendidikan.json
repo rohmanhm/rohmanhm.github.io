@@ -1,0 +1,32 @@
+{
+	"data": [
+		{
+			"date": "2002 - 2004",
+			"info": {
+				"title": "TK Pertiwi Alasdowo",
+				"description": "Alasdowo, Pati, Jawa Tengah, Indonesia"
+			}
+		},
+		{
+			"date": "2004 - 2010",
+			"info": {
+				"title": "SD N Alasdowo 01",
+				"description": "Alasdowo, Pati, Jawa Tengah, Indonesia"
+			}
+		},
+		{
+			"date": "2010 - 2013",
+			"info": {
+				"title": "SMP N 1 TAYU",
+				"description": "Tayu, Pati, Jawa Tengah, Indonesia"
+			}
+		},
+		{
+			"date": "2013 - 2016",
+			"info": {
+				"title": "SMK Telkom Terpadu AKN Marzuqi",
+				"description": "Selempung, Pati, Jawa Tengah, Indonesia"
+			}
+		}
+	]
+}

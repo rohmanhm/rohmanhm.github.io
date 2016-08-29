@@ -1,0 +1,39 @@
+{
+	"data": [
+		{
+			"date": "Februari 2015",
+			"info": {
+				"title": "Sertifikat Praktek Kerja Industri",
+				"description": "Praktek Kerja Industri Pada : PT SIMBIKA JAKARTA Mulai Tanggal 24 Desember 2014 s.d 24 Februari 2015."
+			}
+		},
+		{
+			"date": "17 September 2015",
+			"info": {
+				"title": "Sertifikat Peserta LKS Tingkat Provinsi",
+				"description": "Mengikuti Lomba Kompetensi Siswa Sekolah Menengah Kejuruan (LKS SMK XXIV) tingkat Provinsi Jawa Tengah yang di selerengarakan di Kota Pekalongan pada tanggal 14 s.d 17 September 2015"
+			}
+		},
+		{
+			"date": "27 Februari 2016",
+			"info": {
+				"title": "Sertifikat Kompetensi Rekayasa Perangkat Lunak",
+				"description": "Uji kompetensi bidang Rekayasa Perangkat Lunak"
+			}
+		},
+		{
+			"date": "7 Mei 2016",
+			"info": {
+				"title": "Sertifikat Kelulusan SMK",
+				"description": "Surat keterangan hasil ujian (SKHU)"
+			}
+		},
+		{
+			"date": "27 Mei 2016",
+			"info": {
+				"title": "Sertifikat Peserta LKS Nasional",
+				"description": "Penghargaan LKS Nasional bidang lomba Web Design di Malang, Jawa Timur"
+			}
+		}
+	]
+}

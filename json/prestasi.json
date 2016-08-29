@@ -1,0 +1,46 @@
+{
+	"data": [
+		{
+			"date": "Juli 2014",
+			"info": {
+				"title": "Juara 1 Lomba Web Design Competition USM",
+				"description": "Menjuarai WDC USM Semarang Tingkat SMK/SMA/MA"
+			}
+		},
+		{
+			"date": "November 2014",
+			"info": {
+				"title": "Juara 1 Lomba Web Design Competition UNNES",
+				"description": "Menjuarai WDC UNNES Tingkat Siswa dan Mahasiswa se Indonesia"
+			}
+		},
+		{
+			"date": "Maret 2015",
+			"info": {
+				"title": "Juara 3 Lomba Web Design Competition Vocomfest UGM",
+				"description": "Menjuarai WDC UGM Tingkat SMK/SMA/MA se-Indonesia oleh Vocomfest"
+			}
+		},
+		{
+			"date": "Agustus 2015",
+			"info": {
+				"title": "Juara 1 Lomba LKS Web Design Kabupaten",
+				"description": "Menjuarai LKS Web Design tingkat Kabupaten di Kabupaten Pati"
+			}
+		},
+		{
+			"date": "September 2015",
+			"info": {
+				"title": "Juara 1 Lomba LKS Web Design Provinsi",
+				"description": "Menjuarai LKS Web Design tingkat Provinsi di Provinsi Jawa Tengah"
+			}
+		},
+		{
+			"date": "Mei 2016",
+			"info": {
+				"title": "Juara Harapan 2 Lomba LKS Web Design Nasional",
+				"description": "Menjuarai LKS Web Design tingkat Nasional di Malang"
+			}
+		}
+	]
+}

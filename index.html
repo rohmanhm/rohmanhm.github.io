@@ -1,500 +1,146 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Profile Muhammad Habib Rohman</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="UA-X-COMPATIBLE" content="IE-EDGE">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>CV Online Muhammad Habib Rohman</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" media="screen" href="https://s3.bukalapak.com/ast/ie-555bb417b7ac8e814be500345f0ee8c5b3b2228c05c28b751a7169f78a95b340.css" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" media="screen" href="https://s3.bukalapak.com/ast/ie-555bb417b7ac8e814be500345f0ee8c5b3b2228c05c28b751a7169f78a95b340.css" />
+	<![endif]-->
 </head>
 <body>
-
-<!-- OVERLAYER -->
-<div class="overlay" id="lihat-sertifikat">
-	
-	<button class="btn btn-close close-overlay" onclick="hideSertifikat();">
-		<i class="fa fa-close"></i>
-	</button>
-
 	<div class="container">
-		<div class="overlay-wrapper" id="wrapper-sertifikat">
-			<div class="image-overlay">
-				<div class="image-title">
-					<h3>Sertifikat LKS Provinsi Jateng</h3>
-				</div>
-				<div class="image-file">
-					<img src="img/LKS Provinsi Juara 1.jpg">
-				</div>
-			</div> 
-
-			<div class="image-overlay">
-				<div class="image-title">
-					<h3>Sertifikat anu</h3>
-				</div>
-				<div class="image-file">
-					<img src="img/Sertifikat LKS Nasional.jpg">
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-<!-- COLOR CHOICE -->
-<div class="container" id="color-choice">
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-6">
-			<div class="choose-color">
-				<label>Pilih warna favorit anda</label>
+		<div class="navigate hide" id="navigate">
+			<button onclick="toggleNavigate()">
+				<svg v-if="opened" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+				    <path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/>
+				    <path d="M0 0h24v24H0z" fill="none"/>
+				</svg>
+				<svg v-if="!opened" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+			</button>
+			<div class="menu-navigate">
+				<ul class="dropdown">
+					<li v-for="nav in navigate">
+						{{{ decodeHTML(nav.icon) }}}
+						<a href="{{ nav.url }}" v-if="nav.on.click" onclick="{{ nav.on.click }}">{{ nav.title }}</a>
+						<a href="{{ nav.url }}" v-else>{{ nav.title }}</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6">
-			<ul>
-				<li data-color="blue" style="background:#1F3A93;"></li>
-				<li data-color="red" style="background:#CF000F;"></li>
-				<li data-color="green" style="background:#019875;"></li>
-				<li data-color="yellow" style="background:#F7CA18;"></li>
-				<li data-color="pink" style="background:#DB0A5B;"></li>
-				<li data-color="purple" style="background:#663399;"></li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-<!-- CONTAINER -->
-<div class="container" id="app" aria-describedBy="container">
-	<div class="row">
-		<section id="sidebar" class="col-xs-12 col-sm-5 col-md-3 col-lg-3">
-			<div class="group-panel profile">
-				<div class="image-profile">
-					<img src="img/myprofile.jpg">
+		<div class="outer">
+			<!-- Header -->
+			<header>
+				<div class="header header-image">
+					<div class="image-wrapper" onclick="toggleTheme()"></div>
 				</div>
-				<div class="detail-profile">
-					<div class="profile-name">
-						<h3>M Habib <span>Rohman</span></h3>
-					</div>
-					<div class="profile-position">
-						Web Developer
-					</div>
-					
+				<div class="header header-fullname">
+					<h1>Muhammad Habib Rohman</h1>
 				</div>
-			</div>
-			<hr>
-			<div class="group-panel general-info">
-				<div class="group-title">
-					<h3><i class="fa fa-plus"></i>Tujuan</h3>
+				<div class="header header-profession">
+					<span>Web Developer</span> | <span>Programmer</span>
 				</div>
-				<div class="group-detail">
-					Menjadi seorang Web Developer baik dari sisi Back-End dan Front-End yang bisa membantu dan mengerjakan dengan cepat setiap permintaan
+				<div class="header header-address">
+					<address>
+						Jl. Raya Tayu -  Puncel KM. 08, RT/RW 08/02. Ds Alasdowo, Kec. Dukuhseti
+					</address>
 				</div>
-			</div>
-
-			<div class="group-panel general-info">
-				<div class="group-title">
-					<h3><i class="fa fa-info"></i>General info</h3>
-				</div>
-				<div class="group-detail">
-					<div class="group-content">
-						<h4>Personal</h4>
-						<table>
-							<tbody>
-								<tr>
-									<td>Status</td>
-									<td>:</td>
-									<td>Belum menikah</td>
-								</tr>
-								<tr>
-									<td>Tanggal lahir</td>
-									<td>:</td>
-									<td>15 Agustus 1998</td>
-								</tr>
-								<tr>
-									<td>Jenis Kelamin</td>
-									<td>:</td>
-									<td>Laki-laki</td>
-								</tr>
-								<tr>
-									<td>Kota</td>
-									<td>:</td>
-									<td>Pati</td>
-								</tr>
-								<tr>
-									<td>Provinsi</td>
-									<td>:</td>
-									<td>Jawa Tengah</td>
-								</tr>
-								<tr>
-									<td>Negara</td>
-									<td>:</td>
-									<td>Indonesia</td>
-								</tr>
-								<tr>
-									<td>Hobi</td>
-									<td>:</td>
-									<td>Olahraga, <br> Komputer</td>
-								</tr>
-								
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<div class="group-panel scan-me">
-				<div class="group-title">
-					<h3><i class="fa fa-qrcode"></i>Scan me</h3>
-				</div>
-				<div class="group-detail">
-					<div class="group-content">
-						<div class="qr-code">
-							<img src="img/my_cv.png">
-						</div>
-						<div class="qr-link">
-							Atau kunjungi <input onClick="this.select();" type="text" class="qr-text" value="https://rohmanhm.github.io/" id="qr-link" readonly="true">
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section>
-
-		<section id="main" class="col-xs-12 col-sm-7 col-md-9 col-lg-9">
-			<!-- SEKOLAH -->
-			<div class="panel-group">
-				<div class="panel-title">
-					<h3><i class="fa fa-university"></i>Sekolah</h3>
-				</div>
-				<div class="panel-detail">
-					<table>
-						<tbody>
-							<tr>
-								<td class="align-left table-title">2006 - 2010</td>
-								<td class="ui">
-									<div class="title">
-										SD Negeri Alasdowo 01
-									</div>
-									<div class="desc">
-										Alasdowo, Pati, Jawa Tengah, Indonesia
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">2010 - 2013</td>
-								<td class="ui">
-									<div class="title">
-										SMP Negeri 01 Tayu
-									</div>
-									<div class="desc">
-										Tayu, Pati, Jawa Tengah, Indonesia
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">2013 - 2016</td>
-								<td class="ui">
-									<div class="title">
-										SMK Telkom Terpadu AKN Marzuqi (RPL)
-									</div>
-									<div class="desc">
-										Selempung, Pati, Jawa Tengah, Indonesia
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- PRESTASI -->
-			<div class="panel-group">
-				<div class="panel-title">
-					<h3><i class="fa fa-trophy"></i>Prestasi</h3>
-				</div>
-				<div class="panel-detail">
-					<table>
-						<tbody>
-							<tr>
-								<td class="align-left table-title">Juli 2014</td>
-								<td class="ui">
-									<div class="title">
-										Juara 1 Lomba Web Design Competition USM
-									</div>
-									<div class="desc">
-										Menjuarai WDC USM Semarang Tingkat SMK/SMA/MA
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="prestasi" data-cert="0">No sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">November 2014</td>
-								<td class="ui">
-									<div class="title">
-										Juara 1 Lomba Web Design Competition UNNES
-									</div>
-									<div class="desc">
-										Menjuarai WDC UNNES Tingkat Siswa dan Mahasiswa se-Indonesia
-									</div>
-
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="prestasi" data-cert="1">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">Maret 2015</td>
-								<td class="ui">
-									<div class="title">
-										Juara 3 Lomba Web Design Competition UGM
-									</div>
-									<div class="desc">
-										Menjuarai WDC UGM Tingkat SMK/SMA/MA se-Indonesia oleh Vocomfest
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="prestasi" data-cert="2">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">Agustus 2015</td>
-								<td class="ui">
-									<div class="title">
-										Juara 1 Lomba LKS Web Design Kabupaten
-									</div>
-									<div class="desc">
-										Menjuarai LKS Web Design tingkat Kabupaten di Kabupaten Pati
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="prestasi" data-cert="3">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">September 2015</td>
-								<td class="ui">
-									<div class="title">
-										Juara 1 Lomba LKS Web Design Provinsi
-									</div>
-									<div class="desc">
-										Menjuarai LKS Web Design tingkat Provinsi di Provinsi Jawa Tengah
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="prestasi" data-cert="4">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">Mei 2016</td>
-								<td class="ui">
-									<div class="title">
-										Juara Harapan 2 Lomba LKS Web Design Nasional
-									</div>
-									<div class="desc">
-										Menjuarai LKS Web Design tingkat Nasional di Malang
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="prestasi" data-cert="5">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- SERTIFIKAT -->
-			<div class="panel-group">
-				<div class="panel-title">
-					<h3><i class="fa fa-certificate"></i>Sertifikat</h3>
-				</div>
-				<div class="panel-detail">
-					<table>
-						<tbody>
-							<tr>
-								<td class="align-left table-title">Februari 2015</td>
-								<td class="ui">
-									<div class="title">
-										Sertifikat Praktek Kerja Industri
-									</div>
-									<div class="desc">
-										Praktek Kerja Industri Pada : PT SIMBIKA JAKARTA Mulai Tanggal 24 Desember 2014 s.d 24 Februari 2015.
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="sertifikat" data-cert="0">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">17 September 2015</td>
-								<td class="ui">
-									<div class="title">
-										Sertifikat Peserta LKS Tingkat Provinsi
-									</div>
-									<div class="desc">
-										Mengikuti Lomba Kompetensi Siswa Sekolah Menengah Kejuruan (LKS SMK XXIV) tingkat Provinsi Jawa Tengah yang di selerengarakan di Kota Pekalongan pada tanggal 14 s.d 17 September 2015
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="sertifikat" data-cert="1">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">27 Februari 2016</td>
-								<td class="ui">
-									<div class="title">
-										Sertifikat Kompetensi Rekayasa Perangkat Lunak
-									</div>
-									<div class="desc">
-										Uji kompetensi bidang Rekayasa Perangkat Lunak
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="sertifikat" data-cert="2">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">7 Mei 2016</td>
-								<td class="ui">
-									<div class="title">
-										Sertifikat Kelulusan
-									</div>
-									<div class="desc">
-										Surat keterangan hasil ujian (SKHU)
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="sertifikat" data-cert="3">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="align-left table-title">27 Mei 2016</td>
-								<td class="ui">
-									<div class="title">
-										Sertifikat Peserta LKS Nasional
-									</div>
-									<div class="desc">
-										Penghargaan LKS Nasional bidang lomba Web Design di Malang, Jawa Timur
-									</div>
-								</td>
-								<td class="certif">
-									<div class="certified">
-										<button data-type="sertifikat" data-cert="4">Lihat sertifikat</button>
-									</div>
-								</td>
-							</tr>
-							
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- PENGALAMAN -->
-			<div class="panel-group">
-				<div class="panel-title">
-					<h3><i class="fa fa-tasks"></i>Pengalaman</h3>
-				</div>
-				<div class="panel-detail">
-					<table>
-						<tbody>
-							<tr>
-								<td class="align-left table-title">2014 - 2015</td>
-								<td class="ui">
-									<div class="title">
-										Praktek Kerja Lapangan (Magang) di PT SIMBIKA JAKARTA
-									</div>
-									<div class="desc">
-										Sebagai pemrogram website di SIMBIKA dan membantu memperbaiki laptop-laptop yang rusak disana. <br>
-										<address>
-											Alamat <span>No A Cinere, Jl. Bukit Cinere No.145, Gandul, Kota Depok, Jawa Barat </span><br>
-											Telp. <span>021-7535378</span>
-										</address>
-									</div>
-								</td>
-							</tr>
-
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- SKILL -->
-			<div class="panel-group">
-				<div class="panel-title">
-					<h3><i class="fa fa-code"></i>Skill'<small>s</small></h3>
-				</div>
-				<div class="panel-detail">
-					<ul>
-						<li>PHP</li>
-						<li>CSS3</li>
-						<li>HTML5</li>
-						<li>Javascript</li>
+				<div class="header header-contact">
+					<ul class="contact-head">
 						<li>
-							Framework
-							<ul>
-								<li>jQuery</li>
-								<li>Bootstrap</li>
-								<li>Laravel</li>
-								<li>Lumen</li>
-								<li>NodeJS</li>
-								<li>Gulp</li>
-								<li>dll.</li>
-							</ul>
+							<div class="icon-sprite" id="ch-email"></div>
+							<span><a href="mailto:mhrohman@live.com">mhrohman@live.com</a></span>
 						</li>
 						<li>
-							Design
-							<ul>
-								<li>Photoshop</li>
-								<li>PSD to HTML</li>
-							</ul>
+							<div class="icon-sprite" id="ch-phone"></div>
+							<span><a href="tel:082330891711">082330891711</a></span>
 						</li>
 						<li>
-							Lainnya
-							<ul>
-								<li>GitHub</li>
-								<li>SASS</li>
-								<li>Mikrotik</li>
-								<li>Linux</li>
-							</ul>
-
+							<div class="icon-sprite" id="ch-link"></div>
+							<span><a href="rohmanhm.github.io">rohmanhm.github.io</a></span>
 						</li>
 					</ul>
 				</div>
-			</div>
-		</section>
-	</div>
-</div>
+			</header>
+			
+			<!-- Main -->
+			<main>
+				<section class="center" id="about-me">
+					<div class="title">
+						<h2>Tentang Saya</h2>
+					</div>
+					<div class="content">
+						Saya belajar bahasa pemrograman secara otodidak, mengandalkan mesin pencari Google. 
+						Pertama kali belajar bahasa pemrograman Desktop (Visual Basic, Boerland Delphi 7). 
+						Dalam di tiga tahun terakhir fokus ke pemrograman website.
+					</div>
+				</section>
+				
+				<section id="history">
+					<div class="title">
+						<h2>{{ history[historyIndex] }}</h2>
+					</div>
+					<div class="content">
+						<table>
+							<tbody>
+								<tr v-for="data in datas">
+									<td class="date">{{ data.date }}</td>
+									<td class="info">
+										<h3>{{ data.info.title }}</h3>
+										<p>
+											{{{ data.info.description }}}
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div v-if="buttonNavigate" class="button-navigate">
+						<button class="btn-navigate btn-nav-left" @click="prevDatas()">
+							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M30.83 14.83L28 12 16 24l12 12 2.83-2.83L21.66 24z"/></svg>
+						{{ history[historyIndex-1] }}</button>
+						<button class="btn-navigate btn-nav-right" @click="nextDatas()">{{ history[historyIndex+1] }}
+							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M20 12l-2.83 2.83L26.34 24l-9.17 9.17L20 36l12-12z"/></svg>
+						</button>
+						<div class="clearfix"></div>
+					</div>
+					<div v-if="!buttonNavigate" class="button-navigate">
+						<button disabled="true" class="btn-navigate btn-nav-left" @click="prevDatas()">
+							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M30.83 14.83L28 12 16 24l12 12 2.83-2.83L21.66 24z"/></svg>
+						{{ history[historyIndex-1] }}</button>
+						<button disabled="true" class="btn-navigate btn-nav-right" @click="nextDatas()">{{ history[historyIndex+1] }}
+							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M20 12l-2.83 2.83L26.34 24l-9.17 9.17L20 36l12-12z"/></svg>
+						</button>
+						<div class="clearfix"></div>
+					</div>
+					<div class="status-navigate">
+						<ul class="buble-status">
+							<li v-for="h in history" :data-history="$index">
+								<span v-if="$index === historyIndex"></span>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</section>
+				<div class="clearfix"></div>
+			</main>
 
-<script type="text/javascript" src="js/script.js"></script>
+			<!-- Triangle -->
+			<span class="triangle triangle-top-left"></span>
+			<span class="triangle triangle-top-right"></span>
+			<span class="triangle triangle-bottom-right"></span>
+			<span class="triangle triangle-bottom-left"></span>
+		</div>
+	</div>
+
+<script src="js/vendor/jquery-3.0.0.min.js"></script>
+<script src="js/vendor/vue.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
