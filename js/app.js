@@ -93,18 +93,19 @@ var myhistory = new Vue({
 	},
 	methods: {
 		getDatas: function () {
-			var data, 
-				vm = this,
+			var vm = this,
 				history = vm.$get('history')[vm.$get('historyIndex')];
 			vm.animContent(true);
 			vm.$set('buttonNavigate', false);
 			setTimeout(function () {
 				$.get('json/' + history + '.json', function (res) {
+					var data;
 					if (typeof(res) != 'object') {
 						data = JSON.parse(res);
 					}else{
 						data = res;
 					}
+
 					vm.$set('datas', data.data);
 					vm.animContent(false);
 					vm.$set('buttonNavigate', true);
